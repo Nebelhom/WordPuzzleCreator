@@ -22,6 +22,10 @@ def start_page():
 		]
 	return render_template('index.html', puzzles=puzzles)
 
+@app.route('/about')
+def about_page():
+	return render_template('about.html')
+
 @app.route('/_create_wordsearch.xls', methods=['POST'])
 def create_wordsearch():
 
@@ -54,7 +58,3 @@ def wordsearch():
 def page_not_found(e):
     """Return a custom 404 error."""
     return 'Sorry, nothing at this URL.', 404
-
-# General functions
-def json_string2list():
-	pass

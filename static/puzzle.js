@@ -20,6 +20,7 @@ $(document).ready(function() {
     ////////////////
 
     // General functions for all webpages
+    // when hovering showing groove of button
     $(".nav ul li").hover(function() {
         $(this).find('a').css('color', 'yellow');
         $(this).addClass("hovered_link");
