@@ -51,4 +51,13 @@ $(document).ready(function() {
             $(word).appendTo(this);
         }
     });
+
+    // Remove options from list
+    $('html').keyup(function(e){
+        if(e.keyCode == 46){
+            $('#wordlist option:selected').each(function(){
+                $(this).remove();
+            });
+        }
+    });
 });
