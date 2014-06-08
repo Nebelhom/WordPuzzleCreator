@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Wordsearch Puzzle Creator{% endblock %}
+{% block content %}
+		<div class="creator_background">
+			<h1>Wordsearch Puzzle Creator</h1>
+			<p>Create your own Wordsearch Puzzle!</p>
+			<p>Double click the box below and enter the words you wish to include, separated by a comma (no spaces).</p>
+			<p>On clicking the 'Create' button, an XLS file will be created with the puzzle.</p>
+			<form method="post" action="./_create_wordsearch.xls">
+				<input type="submit" name="Submit" value="Create" id="create_btn" onClick="action_params()" />
+				<br />
+				<br />
+				Wordlist<br />
+				<select multiple="multiple" id="wordlist" name="wordlist" size="15">
+					<!--Will be populated by user-->
+				</select>
+			</form>
+		</div>
+{% endblock %}

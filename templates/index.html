@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+		<div class="creator_background">
+			<h1>Index</h1>
+			<p>Create a puzzle of your choice.</p>
+			<div id="button_box">
+				<!--jQuery will post all the necessary buttons in here-->
+				{% for puzzle in puzzles %}
+					<a href="{{ puzzle.href }}">
+						<div class="puzzle_btn" id="{{ puzzle.ID }}" >
+							{{ puzzle.btn_label }}
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}

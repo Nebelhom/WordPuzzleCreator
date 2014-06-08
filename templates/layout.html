@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <title>Puzzle Creation - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href={{ url_for('static', filename='puzzle.css') }}>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type=text/javascript>
+            var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        </script>
+        <script type="text/javascript" src={{ url_for('static', filename='jquery.fileDownload.js') }}></script>
+        <script type="text/javascript" src={{ url_for('static', filename='puzzle.js') }}></script>
+        {% endblock %}
+    </head>
+    <body>
+        <div class="mainbody">
+            <div class="nav">
+                <ul>
+                    <li class="current"><a href="./">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </div>
+            {% block content %}
+            <div class="creator_background">
+                <p>This block needs to be filled</p>
+            </div>
+            {% endblock %}
+        </div>
+    </body>
+</html>
